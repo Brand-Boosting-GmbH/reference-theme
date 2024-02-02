@@ -1,62 +1,32 @@
-<div
-  class="text-block text-block--{{ block.id }} {{ block.settings.text_style }} text-{{ block.settings.alignment }}"
-  {{ block.shopify_attributes }}
->
-  {{ block.settings.text }}
-</div>
+<{{ block.settings.tag }} class=”heading” {{ block.shopify_attributes }}>
+  Test
+</{{ block.settings.tag }}>
 
 {% schema %}
 {
-  "name": "Test - D",
+  "name": "Test - UtilTitle",
   "tag": null,
   "settings": [
     {
-      "type": "richtext",
-      "id": "text",
-      "label": "Text",
-      "default": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
-    },
-    {
       "type": "select",
-      "id": "text_style",
-      "label": "Style",
+      "id": "heading_size",
+      "label": "Heading size",
       "options": [
         {
-          "value": "",
-          "label": "Body"
+          "value": "h3",
+          "label": "Small"
         },
         {
-          "value": "text-block--subtitle",
-          "label": "Subtitle"
+          "value": "h2",
+          "label": "Medium"
         },
         {
-          "value": "text-block--caption",
-          "label": "Caption"
+          "value": "h1",
+          "label": "Large"
         }
-      ],
-      "default": ""
-    },
-    {
-      "type": "select",
-      "id": "alignment",
-      "label": "Alignment",
-      "options": [
-        {
-          "value": "start",
-          "label": "Start"
-        },
-        {
-          "value": "center",
-          "label": "Center"
-        },
-        {
-          "value": "end",
-          "label": "End"
-        }
-      ],
-      "default": "start"
+      ]
     }
   ],
-  "presets": [{ "name": "Test - D" }]
+  "presets": [{ "name": "Test - UtilTitle" }]
 }
 {% endschema %}
